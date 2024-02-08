@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleUI
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		private static void Main()
 		{
 			List<IRun> runs = new List<IRun>();
 
@@ -22,13 +19,15 @@ namespace ConsoleUI
 			runs.Add(meatball);
 			runs.Add(lizzy);
 
-			foreach ( IRun run in runs ) {
+			foreach ( IRun run in runs )
+			{
 				Console.WriteLine(run.StartRunning());
 			}
 
 			Console.WriteLine();
 
-			foreach ( IRun run in runs ) {
+			foreach ( IRun run in runs )
+			{
 				Console.WriteLine(run.StopRunning());
 			}
 
